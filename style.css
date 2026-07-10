@@ -1,0 +1,216 @@
+body {
+    background-color: #fde4ca;
+    color: #543729;
+    font-family: 'Lucidity Condensed';
+    margin: 0;
+    line-height: 1;
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 15px 80px;
+    background-color: #fde4ca;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    font-size: 165%;
+    font-weight: bold;
+    color: #543729;
+}
+
+.container-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px; 
+}
+
+.nav-link {
+    color: #000000;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 24px;
+    border-radius: 999px;
+    transition: all 0.2s ease;
+}
+
+.nav-link.active {
+    background-color: #4e3404; 
+    color: #ffffff;
+}
+
+.nav-link:hover {
+    background-color: rgba(78, 52, 4, 0.1); 
+}
+
+.nav-link.active:hover {
+    background-color: #5a3d2a; 
+}
+
+.container-right {
+    background-color: #4e3404;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 12px 28px;
+    margin-left: auto;
+    grid-column: 3;
+    display: flex;
+    justify-content: flex-end;
+    object-fit: contain;    
+    animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-7px); 
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.body-banner {
+    width: 100%;
+    height: 85vh; 
+    background-image: url('home_banner.png'); 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; 
+    padding: 0 80px; 
+    box-sizing: border-box;
+}
+
+.body-box { 
+    background-color: #5a3d2a;
+    color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 460px;
+    width: 100%;
+    height: 550px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+
+}
+
+.title-box {
+    font-family: 'Georgia', serif; 
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0 0 10px 0;
+}
+
+.line-box {
+    width: 60px;
+    border: none;
+    border-top: 2px solid #ffffff;
+    margin: 20px auto;
+}
+
+.description-box { 
+    font-family: 'Georgia', sans-serif; 
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 35px ;
+}
+
+.btn-box {
+    display: block;
+    background-color: #ffffff;
+    color: #543729;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 14px 0;
+    border-radius: 8px;
+    text-align: center;
+    transition: background-color 0.2s ease;
+    margin-top: 30px;
+}
+
+.btn-box:hover {
+    background-color: #fde4ca;
+}
+
+/* --- PENGATURAN UNTUK HP --- */
+@media screen and (max-width: 768px) {
+    
+    .navbar {
+        display: flex;
+        flex-direction: column; 
+        gap: 15px;
+        padding: 15px 20px;
+        text-align: center;
+    }
+
+    .nav-logo {
+        justify-content: center; 
+    }
+
+    .container-center {
+        flex-wrap: wrap; 
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .nav-link {
+        padding: 8px 16px; 
+        font-size: 14px;
+    }
+
+    .container-right {
+        margin: 0 auto; 
+        grid-column: unset;
+        width: 100%;
+        max-width: 200px;
+        justify-content: center;
+    }
+
+    .body-banner {
+        height: auto; 
+        min-height: 100vh; 
+        padding: 40px 20px; 
+        flex-direction: column;
+        justify-content: center; 
+    }
+
+    .body-box {
+        max-width: 100%; 
+        width: 100%;
+        padding: 30px 20px; 
+    }
+    
+    .banner-title {
+        font-size: 26px; 
+    }
+
+    .banner-text {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 25px;
+    }
+}
