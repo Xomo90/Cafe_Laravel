@@ -158,43 +158,65 @@ body {
 
 /* --- PENGATURAN UNTUK HP --- */
 @media screen and (max-width: 768px) {
+    html, body {
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
     *, *:before, *:after {
-        box-sizing: border-box;
+        box-sizing: border-box !important;
     }
 
     .navbar {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        padding: 15px 20px;
-        text-align: center;
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 15px 10px !important;
+        gap: 12px !important;
+        text-align: center !important;
+        box-sizing: border-box !important;
+    }
+
+    .nav-logo {
+        justify-content: center !important;
+        width: 100% !important;
+        margin: 0 !important;
     }
 
     .nav-links {
-        flex-wrap: wrap;
-        gap: 10px;
-        justify-content: center;
-        padding: 0;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 100% !important;
+    }
+
+    .nav-links a {
+        padding: 6px 12px !important;
+        font-size: 14px !important;
     }
 
     .body-banner {
-        height: auto;
-        min-height: 100vh;
-        padding: 40px 15px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        height: auto !important;
+        min-height: 100vh !important;
+        width: 100% !important;
+        padding: 20px 15px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        box-sizing: border-box !important;
     }
 
     .body-box {
         width: 100% !important;
         max-width: 100% !important;
         height: auto !important;
-        min-height: auto !important;
-        padding: 35px 20px !important;
+        padding: 30px 20px !important;
         margin: 0 auto !important;
-        float: none !important;
         box-sizing: border-box !important;
         display: flex !important;
         flex-direction: column !important;
@@ -205,22 +227,24 @@ body {
         font-size: 14px !important;
         line-height: 1.6 !important;
         width: 100% !important;
-        margin: 0 0 25px 0 !important;
+        margin-top: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-bottom: 30px !important;
         padding: 0 !important;
         white-space: normal !important;
         word-break: break-word !important;
-        overflow-wrap: break-word !important;
     }
 
     .banner-title, .body-box h2 {
         font-size: 24px !important;
         line-height: 1.3 !important;
-        margin-bottom: 10px !important;
+        margin-bottom: 12px !important;
     }
 
     .banner-btn, .body-box a {
         width: 100% !important;
         display: block !important;
-        margin-top: auto !important;
+        margin-top: 0 !important;
     }
 }
